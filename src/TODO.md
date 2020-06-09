@@ -1,0 +1,4 @@
+-   [ ] Typescript version
+-   [ ] Documentation
+-   [ ] Tests
+-   [ ] Examples: e.g Pager, Session storage

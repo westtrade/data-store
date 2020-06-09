@@ -18,7 +18,7 @@ class DataStore {
 		this.initialize()
 	}
 
-	initialize = () => {
+	initialize() {
 		const initialDataState = this.applyMapStateTransform(
 			initialState,
 			undefined,
@@ -28,7 +28,7 @@ class DataStore {
 		this.store = writable(initialDataState)
 	}
 
-	applyMapStateTransform = (currentState, inputData, action) => {
+	applyMapStateTransform(currentState, inputData, action) {
 		currentState = { ...currentState }
 
 		if (!this.mapState) {
@@ -39,7 +39,7 @@ class DataStore {
 		return this.mapState(currentState, inputData, action)
 	}
 
-	transform = (...props) => {
+	transform(...props) {
 		let newState = this.applyMapStateTransform(this.state, ...props)
 		if (this.store) {
 			this.store.set(newState)
@@ -49,7 +49,7 @@ class DataStore {
 		return get(this.store)
 	}
 
-	sync = async vars => {
+	async sync(vars) {
 		this.store.update($state => {
 			$state.loading = true
 			return $state
@@ -76,7 +76,7 @@ class DataStore {
 		})
 	}
 
-	subscribe = (...props) => {
+	subscribe(...props) {
 		return this.store.subscribe(...props)
 	}
 }

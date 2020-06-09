@@ -1,6 +1,6 @@
 {
 	"name": "@westtrade/data-store",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "src/DataStore.js",
 	"scripts": {
@@ -14,5 +14,9 @@
 	},
 	"devDependencies": {
 		"jest": "^26.0.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/westtrade/data-store.git"
 	}
 }
